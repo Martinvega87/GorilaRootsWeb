@@ -108,6 +108,70 @@ function Home() {
               </Text>
             </Box>
           </Link>
+
+          {/* Cuarta imagen con "Profes" */}
+          <Link href="#profes"> {/* Enlace al ancla de Profes */}
+            <Box
+              overflow="hidden"
+              position="relative"
+              height="500px"
+              width="100%"
+              _hover={{ img: { transform: 'scale(1.2)' } }}
+              transition="all 0.5s ease"
+            >
+              <Image
+                src="/src/asets/bjj4daImagenHome.jpg"
+                alt="Cuarta Imagen"
+                objectFit="cover"
+                width="100%"
+                height="100%"
+                transition="transform 0.5s ease"
+              />
+              <Text
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                color="white"
+                fontWeight="bold"
+                fontSize="2xl"
+              >
+                Profes
+              </Text>
+            </Box>
+          </Link>
+
+          {/* Quinta imagen con "Contactos" */}
+          <Link href="#contactos"> {/* Enlace al ancla de Contactos */}
+            <Box
+              overflow="hidden"
+              position="relative"
+              height="500px"
+              width="100%"
+              _hover={{ img: { transform: 'scale(1.2)' } }}
+              transition="all 0.5s ease"
+            >
+              <Image
+                src="/src/assets/bjj5daImagenHome.jpg"
+                alt="Quinta Imagen"
+                objectFit="cover"
+                width="100%"
+                height="100%"
+                transition="transform 0.5s ease"
+              />
+              <Text
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                color="white"
+                fontWeight="bold"
+                fontSize="2xl"
+              >
+                Contactos
+              </Text>
+            </Box>
+          </Link>
         </Grid>
       </Box>
 
@@ -124,6 +188,30 @@ function Home() {
       {/* Sección de Multimedia */}
       <Box id="multimedia" py={12} bg="gray.400">
         <Multimedia />
+      </Box>
+
+      {/* Sección de Profes */}
+      <Box id="profes" py={12} bg="gray.200">
+        <Text fontSize="3xl" textAlign="center" fontWeight="bold" mb={8}>Nuestros Profes</Text>
+        <Image
+          src="/src/assets/bjj4daImagenHome.jpg"
+          alt="Nuestros Profes"
+          objectFit="cover"
+          width="100%"
+          height="500px"
+        />
+      </Box>
+
+      {/* Sección de Contactos */}
+      <Box id="contactos" py={12} bg="gray.300">
+        <Text fontSize="3xl" textAlign="center" fontWeight="bold" mb={8}>Contactos</Text>
+        <Image
+          src="/src/assets/bjj5daImagenHome.jpg"
+          alt="Contactos"
+          objectFit="cover"
+          width="100%"
+          height="500px"
+        />
       </Box>
     </>
   );
