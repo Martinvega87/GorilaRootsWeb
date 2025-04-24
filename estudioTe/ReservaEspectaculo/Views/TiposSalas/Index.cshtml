@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ReservaEspectaculo.Models.TipoSala>
+@inject SignInManager<Persona> signInManager
+
+@{
+    ViewData["Title"] = "Tipos de Salas";
+}
+
+<h1>Tipos de Salas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Agregar Tipo de Sala</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @if (signInManager.IsSignedIn(User) && (User.IsInRole("Admin") || User.IsInRole("Empleado")))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a><span> | </span>
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

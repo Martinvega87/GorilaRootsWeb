@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ReservaEspectaculo.Models.Persona>
+@inject SignInManager<Persona> signInManager
+
+@{
+    ViewData["Title"] = "Personas";
+}
+
+<h1>Personas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreApellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreApellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dni)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a><span> | </span>
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalles</a><span> | </span>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

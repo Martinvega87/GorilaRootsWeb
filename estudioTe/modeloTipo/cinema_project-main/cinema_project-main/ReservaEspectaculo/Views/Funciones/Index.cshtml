@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ReservaEspectaculo.Models.Funcion>
+@inject SignInManager<Persona> signInManager
+@using ReservaEspectaculo.Data
+
+@{
+    ViewData["Title"] = "Funciones";
+}
+
+<h1>Funciones</h1>
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pelicula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sala)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ButacasDisponibles)
+            </th>
+            @if (signInManager.IsSignedIn(User) && !User.IsInRole("Cliente")) { 
+                <th>
+                    @Html.DisplayNameFor(model => model.Confirmada)
+                </th>
+            }
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            @if (signInManager.IsSignedIn(User) && (!User.IsInRole(Cfgs.RolCliente)) || (item.Confirmada && (item.Fecha - DateTime.Now).TotalDays <= 7))
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pelicula.Titulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sala.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ButacasDisponibles)
+            </td>
+            @if (signInManager.IsSignedIn(User) && !User.IsInRole("Cliente"))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Confirmada)
+                </td>
+            }
+            <td>
+                @if (item.Confirmada && !Helpers.esPasada(item))
+                {
+                    <a asp-action="NuevaReserva" asp-route-id="@item.Id">Reservar</a><span> | </span>
+                }
+                @if (signInManager.IsSignedIn(User) && !User.IsInRole("Cliente"))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <span> | </span><a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a><span> | </span>
+                }
+                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a>
+            </td>
+        </tr>
+            }
+        }
+    </tbody>
+</table>

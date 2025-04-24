@@ -1,0 +1,133 @@
+﻿@inject SignInManager<Persona> signInManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ReservaEspectaculo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Cinema City</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Personas" asp-action="Index">Personas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Empleados" asp-action="Index">Empleados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Peliculas" asp-action="Index">Peliculas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Funciones" asp-action="Index" asp-route-id=@Guid.Empty>Funciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Reservas" asp-action="Index">Reservas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TiposSalas" asp-action="Index">Tipos de salas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Generos" asp-action="Index">Géneros</a>
+                            </li>
+                            <li class="nav-item"><span class="nav-link text-dark">@User.Identity.Name</span></li>
+                            <li class="nav-item">
+                                <a asp-action="CerrarSesion" asp-controller="Accounts" class="nav-link text-dark">Cerrar Sesión</a>
+                            </li>
+                        }
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Empleado"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Peliculas" asp-action="Index">Peliculas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Funciones" asp-action="Index" asp-route-id=@Guid.Empty>Funciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Reservas" asp-action="Index">Reservas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Salas" asp-action="Index">Salas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="TiposSalas" asp-action="Index">Tipos de salas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Generos" asp-action="Index">Géneros</a>
+                            </li>
+                            <li class="nav-item"><span class="nav-link text-dark">@User.Identity.Name</span></li>
+                            <li class="nav-item">
+                                <a asp-action="CerrarSesion" asp-controller="Accounts" class="nav-link text-dark">Cerrar Sesión</a>
+                            </li>
+                        }
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Cliente"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Peliculas" asp-action="Index">Peliculas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Funciones" asp-action="Index" asp-route-id=@Guid.Empty>Funciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Reservas" asp-action="Index">Mis Reservas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="Details" asp-controller="Clientes" class="nav-link text-dark">@User.Identity.Name</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-action="CerrarSesion" asp-controller="Accounts" class="nav-link text-dark">Cerrar Sesión</a>
+                            </li>
+                        }
+                        @if (!signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="IniciarSesion">Iniciar Sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Accounts" asp-action="Registrar">Registrarse</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - ReservaEspectaculo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

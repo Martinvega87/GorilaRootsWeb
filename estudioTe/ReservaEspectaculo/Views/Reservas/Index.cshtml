@@ -1,0 +1,74 @@
+﻿@model IEnumerable<ReservaEspectaculo.Models.Reserva>
+@inject SignInManager<Persona> signInManager
+@using ReservaEspectaculo.Data
+
+@{
+    ViewData["Title"] = "Reservas";
+}
+
+@if (User.IsInRole("Admin") || User.IsInRole("Empleado"))
+{
+    <h1> Reservas </h1>
+}
+else
+{
+    <h1> Mis Reservas </h1>
+}
+
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcion)
+            </th>
+            @if (User.IsInRole("Admin") || User.IsInRole("Empleado"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Cliente)
+                </th>
+            }
+            <th>
+                @Html.DisplayNameFor(model => model.CantidadButacas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @if ((User.IsInRole("Admin") || User.IsInRole("Empleado")) || item.Cliente.Email.Equals(User.Identity.Name))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Funcion.Descripcion)
+                    </td>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Empleado"))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cliente.NombreApellido)
+                        </td>
+                    }
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CantidadButacas)
+                    </td>
+                    <td>
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin") || User.IsInRole("Empleado"))
+                        {
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                        }
+                        @if (signInManager.IsSignedIn(User) && User.IsInRole("Cliente"))
+                        {
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalles</a>
+                            @if (Helpers.PuedeCancelar(item))
+                            {
+                                <span> | </span><a asp-action="Delete" asp-route-id="@item.Id">Cancelar</a>
+                            }
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

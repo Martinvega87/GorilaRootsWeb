@@ -1,0 +1,8 @@
+Admin:
+admin@admin.com - Password1!
+
+Empleado:
+un@empleado.com - Password1!
+
+Cliente:
+empleado@empleado.com- Password1!
