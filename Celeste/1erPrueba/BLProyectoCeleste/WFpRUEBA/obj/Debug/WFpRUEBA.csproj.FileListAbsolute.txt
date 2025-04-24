@@ -1,0 +1,13 @@
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\WFpRUEBA.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\WFpRUEBA.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\BL.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\BLProyectoCeleste.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\BL.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\bin\Debug\BLProyectoCeleste.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.csproj.AssemblyReference.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.UserControl1.resources
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.csproj.GenerateResource.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.csproj.CopyComplete
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\WFpRUEBA\obj\Debug\WFpRUEBA.pdb

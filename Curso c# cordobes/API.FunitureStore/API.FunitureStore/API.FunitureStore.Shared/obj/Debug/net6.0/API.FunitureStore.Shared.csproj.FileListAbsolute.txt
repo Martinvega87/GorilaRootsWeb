@@ -1,0 +1,11 @@
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\bin\Debug\net6.0\API.FunitureStore.Shared.deps.json
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\bin\Debug\net6.0\API.FunitureStore.Shared.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\bin\Debug\net6.0\API.FunitureStore.Shared.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.AssemblyInfoInputs.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.AssemblyInfo.cs
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\refint\API.FunitureStore.Shared.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\API.FunitureStore.Shared.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Curso c# cordobes\API.FunitureStore\API.FunitureStore\API.FunitureStore.Shared\obj\Debug\net6.0\ref\API.FunitureStore.Shared.dll

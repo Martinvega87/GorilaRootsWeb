@@ -1,0 +1,6 @@
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\bin\Debug\BLProyectoCeleste.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\bin\Debug\BLProyectoCeleste.pdb
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\obj\Debug\BLProyectoCeleste.csproj.AssemblyReference.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\obj\Debug\BLProyectoCeleste.csproj.CoreCompileInputs.cache
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\obj\Debug\BLProyectoCeleste.dll
+C:\Users\marti\OneDrive\Documents\GlobeCode\Celeste\1erPrueba\BLProyectoCeleste\BLProyectoCeleste\obj\Debug\BLProyectoCeleste.pdb

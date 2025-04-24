@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210528014214_IdentityMigration.cs" />
+    <Compile Remove="Migrations\20210528014214_IdentityMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210530174000_aver.cs" />
+    <Compile Remove="Migrations\20210530174000_aver.Designer.cs" />
+    <Compile Remove="Migrations\20210530201803_aver.cs" />
+    <Compile Remove="Migrations\20210530201803_aver.Designer.cs" />
+    <Compile Remove="Migrations\20210605193353_unique.cs" />
+    <Compile Remove="Migrations\20210605193353_unique.Designer.cs" />
+    <Compile Remove="Migrations\20210605204501_prueba.cs" />
+    <Compile Remove="Migrations\20210605204501_prueba.Designer.cs" />
+    <Compile Remove="Migrations\20210612202735_coso.cs" />
+    <Compile Remove="Migrations\20210612202735_coso.Designer.cs" />
+    <Compile Remove="Migrations\20210612211421_aver.cs" />
+    <Compile Remove="Migrations\20210612211421_aver.Designer.cs" />
+    <Compile Remove="Migrations\20210620170037_test.cs" />
+    <Compile Remove="Migrations\20210620170037_test.Designer.cs" />
+    <Compile Remove="Migrations\20210622004145_fix.cs" />
+    <Compile Remove="Migrations\20210622004145_fix.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore" Version="3.1.5" />
+  </ItemGroup>
+
+</Project>

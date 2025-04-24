@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EstudioTeProyecto.Models.AbstractPersona" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="EstudioTeProyecto.Models.AbstractPersona.TipoCliente" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\AbstractPersona.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="EstudioTeProyecto.Models.AbstractPersona.TipoGenero" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\AbstractPersona.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAQAAAEEACAggAAACAUCAAAAAAAAAQAAAgQ=</HashCode>
+      <FileName>Models\AbstractPersona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.AbstractPersonaExterna" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AaAAAAAAAAAAAQAAAAAAAAQAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AbstractPersonaExterna.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.Cliente">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Cliente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrdenDeCompra" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.producto" Collapsed="true">
+    <Position X="9.5" Y="1.25" Width="1.75" />
+    <AssociationLine Name="OrdenDeCompra" Type="EstudioTeProyecto.Models.OrdenDeCompra">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.627" Y="0.218" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAQACAAAQgAAAAAAAAAAAAAgAAAAAACAAwAgAABAAA=</HashCode>
+      <FileName>Models\producto.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrdenDeCompra" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.Proveedor">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.Usuario">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.OrdenDeCompra" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAEAAAAABBAAAABAAEAAAQEAAAIEQSAAAAAgAAA=</HashCode>
+      <FileName>Models\OrdenDeCompra.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.208" />
+  </Class>
+  <Class Name="EstudioTeProyecto.Models.Factura" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="OrdenDeCompra" Type="EstudioTeProyecto.Models.OrdenDeCompra" ManuallyRouted="true">
+      <Path>
+        <Point X="11.5" Y="3.312" />
+        <Point X="11.5" Y="3.781" />
+        <Point X="10.25" Y="3.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\Factura.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrdenDeCompra" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
